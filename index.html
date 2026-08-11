@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b3f42" />
+    <meta name="description" content="人資室傷病給付申請指南：快速確認職災或普通傷病的申請條件、給付內容、文件與送件方式。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="傷病給付申請指南" />
+    <meta property="og:description" content="不能工作時，依六個步驟完成傷病給付申請。" />
+    <meta property="og:image" content="./og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="./assets/site.css" />
+    <title>傷病給付申請指南｜行管處人資室</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要內容</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="回到網站首頁">
+        <span class="brand-mark">HR</span>
+        <span class="brand-copy">
+          <strong>傷病給付申請指南</strong>
+          <small>行管處人資室</small>
+        </span>
+      </a>
+      <nav aria-label="主要選單">
+        <a href="#choose">情況判斷</a>
+        <a href="#benefits">給付說明</a>
+        <a href="#documents">文件清單</a>
+        <a class="nav-cta" href="#submit">表單繳回</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <span class="eyebrow">不能工作時，先把權益與流程理清楚</span>
+          <h1>受傷生病，<br /><em>這樣申請薪資補償。</em></h1>
+          <p>依人資室流程表重新整理。先判斷是否與工作有關，再確認治療方式、不能工作天數、給付內容與應備文件。</p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#choose">開始判斷情況 <span aria-hidden="true">→</span></a>
+            <span>不用登入・不會儲存個人資料</span>
+          </div>
+        </div>
+
+        <aside class="route-card" aria-label="六步驟申請路線圖">
+          <div class="route-head"><span>申請路線圖</span><strong>6 個步驟</strong></div>
+          <ol>
+            <li><span>01</span>確認事故期間</li>
+            <li><span>02</span>確認就醫身分</li>
+            <li><span>03</span>向單位請假</li>
+            <li><span>04</span>了解給付方式</li>
+            <li><span>05</span>備妥申請文件</li>
+            <li><span>06</span>表單繳回行管處</li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="section choose-section" id="choose">
+        <div class="section-heading centered">
+          <span class="section-number">01</span>
+          <h2>先確認這次傷病發生的情況</h2>
+          <p>選擇最接近的情況，系統會帶你走到對應的請假、給付與文件說明。</p>
+        </div>
+
+        <div class="scenario-grid">
+          <button class="scenario-card occupational" type="button" data-scenario="occupational" aria-pressed="false">
+            <span class="card-index">A</span>
+            <span class="card-kicker">工作中・上下班途中・公出・職業病</span>
+            <strong>與工作有關</strong>
+            <span class="card-description">上班時、上下班途中或公出時發生意外，或因執行職務導致的職業傷害、職業病。</span>
+            <span class="card-action">選擇這個情況 <span aria-hidden="true">→</span></span>
+          </button>
+
+          <button class="scenario-card ordinary" type="button" data-scenario="ordinary" aria-pressed="false">
+            <span class="card-index">B</span>
+            <span class="card-kicker">非上班期間・一般疾病・生活意外</span>
+            <strong>與工作無關</strong>
+            <span class="card-description">非上班期間發生、與執行職務完全無關的普通傷害或普通疾病。</span>
+            <span class="card-action">選擇這個情況 <span aria-hidden="true">→</span></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section decision-section" id="decision">
+        <div class="section-heading">
+          <span class="section-number">02</span>
+          <h2>依你的情況確認申請路徑</h2>
+          <p id="decision-subtitle">請先選擇上方情況，這裡會顯示對應的判斷問題。</p>
+        </div>
+
+        <div class="decision-layout">
+          <div class="question-card" id="question-card">
+            <div class="empty-state" id="decision-empty">
+              <span>?</span>
+              <strong>尚未選擇情況</strong>
+              <p>先選擇「與工作有關」或「與工作無關」。</p>
+            </div>
+
+            <div class="question-flow" id="occupational-flow" hidden>
+              <div class="path-summary">
+                <span>就醫身分</span>
+                <strong>使用健保卡，以健保身分直接就醫</strong>
+              </div>
+              <div class="question-block">
+                <span class="question-index">A</span>
+                <div>
+                  <h3>因傷病不能工作的期間有多久？</h3>
+                  <p>職業傷病給付自不能工作的第 4 日起計算。</p>
+                  <div class="choice-row">
+                    <button class="choice-button" type="button" data-flow="occupational" data-value="short">3 日以內</button>
+                    <button class="choice-button" type="button" data-flow="occupational" data-value="long">4 日以上</button>
+                  </div>
+                </div>
+              </div>
+              <div class="leave-note"><span>請假方式</span><strong>申請公傷病假</strong><small>請單位主管協助初步判定原因，詳細使用方式請查「請假作業管理辦法」。</small></div>
+            </div>
+
+            <div class="question-flow" id="ordinary-flow" hidden>
+              <div class="path-summary">
+                <span>就醫身分</span>
+                <strong>使用健保卡，以健保身分直接就醫</strong>
+              </div>
+              <div class="question-block">
+                <span class="question-index">A</span>
+                <div>
+                  <h3>是否已領取勞保老年給付？</h3>
+                  <p>已領取者的保險身分通常僅保職災，沒有投保普通事故。</p>
+                  <div class="choice-row">
+                    <button class="choice-button" type="button" data-question="retired" data-value="no">尚未領取</button>
+                    <button class="choice-button" type="button" data-question="retired" data-value="yes">已領取</button>
+                  </div>
+                </div>
+              </div>
+              <div class="question-block dependent" data-depends="retired-no">
+                <span class="question-index">B</span>
+                <div>
+                  <h3>這次是門診還是住院治療？</h3>
+                  <p>普通傷病給付以住院治療為申請條件。</p>
+                  <div class="choice-row">
+                    <button class="choice-button" type="button" data-question="care" data-value="outpatient">門診</button>
+                    <button class="choice-button" type="button" data-question="care" data-value="inpatient">住院</button>
+                  </div>
+                </div>
+              </div>
+              <div class="question-block dependent" data-depends="care-inpatient">
+                <span class="question-index">C</span>
+                <div>
+                  <h3>住院不能工作的期間有多久？</h3>
+                  <p>普通傷病給付自住院不能工作的第 4 日起計算。</p>
+                  <div class="choice-row">
+                    <button class="choice-button" type="button" data-question="ordinary-days" data-value="short">3 日以內</button>
+                    <button class="choice-button" type="button" data-question="ordinary-days" data-value="long">4 日以上</button>
+                  </div>
+                </div>
+              </div>
+              <div class="leave-note"><span>請假方式</span><strong>申請普通傷病假</strong><small>詳細使用方式請查「請假作業管理辦法」。</small></div>
+            </div>
+          </div>
+
+          <aside class="result-card result-idle" id="result-card" aria-live="polite">
+            <span class="result-label">初步判斷結果</span>
+            <span class="result-symbol" id="result-symbol">?</span>
+            <h3 id="result-title">等待你的選擇</h3>
+            <p id="result-detail">完成左側問題後，這裡會顯示對應的申請路徑。</p>
+            <a id="result-link" href="#benefits" hidden>查看給付內容 →</a>
+          </aside>
+        </div>
+        <p class="legal-note">本頁依人資室流程表提供初步指引，實際資格與給付結果仍以勞工保險局、保險公司及相關規定核定為準。</p>
+      </section>
+
+      <section class="section benefits-section" id="benefits">
+        <div class="section-heading">
+          <span class="section-number">03</span>
+          <h2>兩種傷病給付內容</h2>
+          <p>依事故原因分為職業傷病與普通傷病；兩者的治療條件、比例與最長期間不同。</p>
+        </div>
+
+        <div class="benefit-grid">
+          <article class="benefit-card featured">
+            <span class="benefit-type">職業傷病給付</span>
+            <h3>與工作有關</h3>
+            <div class="benefit-summary"><strong>門診、住院皆適用</strong><span>自不能工作的第 4 日起</span></div>
+            <h4>勞工保險局給付</h4>
+            <dl>
+              <div><dt>前 2 個月</dt><dd>前 6 個月平均日投保薪資 × 100% × 給付日數</dd></div>
+              <div><dt>第 3 個月起</dt><dd>前 6 個月平均日投保薪資 × 70% × 給付日數</dd></div>
+              <div><dt>最長期間</dt><dd>不論年資，合計最長 2 年</dd></div>
+            </dl>
+            <h4>富邦產物保險給付</h4>
+            <dl>
+              <div><dt>前 3 日</dt><dd>前 6 個月平均日投保薪資 × 100% × 前 3 日天數</dd></div>
+              <div><dt>第 3 個月起至 2 年</dt><dd>依流程表列示，以前 6 個月平均投保薪資的 30% 補償</dd></div>
+            </dl>
+            <p class="card-note">須先完成勞保局給付，收到核發成功公文後，才可申請富邦產物保險。</p>
+          </article>
+
+          <article class="benefit-card">
+            <span class="benefit-type warm">普通傷病給付</span>
+            <h3>與工作無關</h3>
+            <div class="benefit-summary warm"><strong>僅限住院治療</strong><span>自住院不能工作的第 4 日起</span></div>
+            <h4>勞工保險局給付</h4>
+            <dl>
+              <div><dt>給付比例</dt><dd>前 6 個月平均日投保薪資 × 50% × 給付日數</dd></div>
+              <div><dt>年資未滿 1 年</dt><dd>最多發給 6 個月</dd></div>
+              <div><dt>年資滿 1 年</dt><dd>持續住院者，合計最多發給 1 年</dd></div>
+              <div><dt>富邦產物</dt><dd>普通傷病不予給付</dd></div>
+            </dl>
+            <p class="card-note warning">已領取勞保老年給付者，若保險身分僅保職災，不能申請普通傷病給付。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section documents-section" id="documents">
+        <div class="section-heading">
+          <span class="section-number">04</span>
+          <h2>申請文件一次備齊</h2>
+          <p>先切換申請類別，再逐項勾選。勾選紀錄只保留在目前頁面，重新整理後會清除。</p>
+        </div>
+
+        <div class="document-tabs" role="tablist" aria-label="申請文件類別">
+          <button class="document-tab active" type="button" role="tab" aria-selected="true" data-doc-tab="occupational">職業傷病</button>
+          <button class="document-tab" type="button" role="tab" aria-selected="false" data-doc-tab="ordinary">普通傷病</button>
+        </div>
+
+        <div class="document-panel active" data-doc-panel="occupational">
+          <div class="document-column">
+            <div class="document-head"><span>勞工保險局使用</span><strong class="progress-text">0 / 6</strong></div>
+            <div class="progress-track"><span></span></div>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>傷病給付申請書及給付收據</strong><small>勾選「職業傷害」，並使用對應統編版本。</small></span></label>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>上下班／公出途中事故陳述書</strong><small>上下班或公出途中發生事故時提供。</small></span></label>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>診斷證明書副本</strong><small>須由醫院蓋「與正本相符」專用章。</small></span></label>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>存摺影本</strong><small>貼於傷病給付申請書及給付收據。</small></span></label>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>駕照影本</strong><small>事故時有駕車者提供，貼於事故陳述書。</small></span></label>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>交通事故當事人登記聯單影本</strong><small>如有報案請提供。</small></span></label>
+          </div>
+
+          <div class="document-column insurer">
+            <div class="document-head"><span>富邦產物保險使用</span><strong class="progress-text">0 / 5</strong></div>
+            <div class="progress-track"><span></span></div>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>富邦理賠申請書</strong><small>請向行管處索取表單。</small></span></label>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>診斷證明書副本</strong><small>須由醫院蓋「與正本相符」專用章。</small></span></label>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>存摺影本</strong></span></label>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>交通事故當事人登記聯單影本</strong><small>如有報案請提供。</small></span></label>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>勞保局核發成功公文影本</strong><small>確認勞保局職災傷病給付完成後提供。</small></span></label>
+          </div>
+          <div class="document-warning">勞保局與富邦若有共同附件，請分別提供。診斷證明「副本」不是自行影印本，必須由醫院蓋印與正本相符章。</div>
+        </div>
+
+        <div class="document-panel" data-doc-panel="ordinary" hidden>
+          <div class="document-column full">
+            <div class="document-head"><span>勞工保險局使用</span><strong class="progress-text">0 / 4</strong></div>
+            <div class="progress-track"><span></span></div>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>傷病給付申請書及給付收據</strong><small>勾選「普通傷害／普通疾病」，並使用對應統編版本。</small></span></label>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>診斷證明書副本</strong><small>須由醫院蓋「與正本相符」專用章。</small></span></label>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>存摺影本</strong><small>貼於傷病給付申請書及給付收據。</small></span></label>
+            <label class="document-item"><input type="checkbox" /><span class="custom-check">✓</span><span><strong>交通事故當事人登記聯單影本</strong><small>如有報案請提供。</small></span></label>
+          </div>
+          <div class="document-warning">普通傷病不需申請富邦產物保險。已領取勞保老年給付、保險身分僅保職災者不適用。</div>
+        </div>
+      </section>
+
+      <section class="section submit-section" id="submit">
+        <div class="section-heading light">
+          <span class="section-number">05</span>
+          <h2>表單填妥後，這樣繳回</h2>
+          <p>先寄電子檔確認，資料無誤後再送回簽名紙本。</p>
+        </div>
+
+        <div class="submit-grid">
+          <article>
+            <span class="step-number">1</span>
+            <h3>寄送電子檔</h3>
+            <p>表單請填電子版並寄送 Word 檔；紙本附件請掃描為 PDF。</p>
+            <a href="mailto:sl0218@slsc.org.tw">sl0218@slsc.org.tw</a>
+            <small>收件人：張家安</small>
+          </article>
+          <article>
+            <span class="step-number">2</span>
+            <h3>等待資料確認</h3>
+            <p>由行管處人資室確認資料是否完整；若需補件，請依通知補充。</p>
+          </article>
+          <article>
+            <span class="step-number">3</span>
+            <h3>送回簽名紙本</h3>
+            <p>資料確認無誤後，再將簽名紙本送回行管處。</p>
+            <address>
+              <span>114004 台北市內湖區</span>
+              <span>內湖路一段 285 號 6 樓</span>
+              <span>西湖日照・行管處人資室</span>
+            </address>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div>
+          <span class="eyebrow">需要協助？</span>
+          <h2>不確定怎麼申請，先聯絡人資室。</h2>
+          <p>職災原因判定、表單版本或附件內容有疑問時，請在送件前確認。</p>
+        </div>
+        <div class="contact-card">
+          <span>行管處人資室</span>
+          <strong>張家安</strong>
+          <a href="tel:+886226561700,225"><small>電話</small>02-2656-1700 分機 225</a>
+          <a href="mailto:sl0218@slsc.org.tw"><small>Email</small>sl0218@slsc.org.tw</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>傷病給付申請指南・行管處人資室</span>
+      <span>內容依「HR 常問問題—流程表」整理</span>
+    </footer>
+
+    <script defer src="./assets/site.js"></script>
+  </body>
+</html>
